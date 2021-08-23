@@ -1,0 +1,11 @@
+package Nerubian.Exercise.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import Nerubian.Exercise.model.Socket;
+
+@Repository
+public interface SocketRepository extends JpaRepository<Socket, Long>{
+
+}

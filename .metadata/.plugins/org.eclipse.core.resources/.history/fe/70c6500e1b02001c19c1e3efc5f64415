@@ -1,0 +1,20 @@
+package Nerubian.Exercise.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import Nerubian.Exercise.model.Socket;
+
+public interface SocketService {
+
+	List<Socket> listAll();
+
+	Optional<Socket> getById(Long id);
+	
+	void delete(Long id);
+
+	Socket save(Socket socket);
+
+	Socket update(Socket socket);
+	
+}

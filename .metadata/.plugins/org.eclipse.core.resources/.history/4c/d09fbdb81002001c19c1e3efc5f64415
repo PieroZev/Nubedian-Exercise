@@ -1,0 +1,39 @@
+package Nerubian.Exercise.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import Nerubian.Exercise.model.CPU;
+
+@Service
+public class CPUServiceImpl implements CPUService {
+
+	public List<CPU> listAll() {
+		
+		return null;
+	}
+
+	public CPU getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public CPU save(CPU partido) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public CPU update(CPU partido) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

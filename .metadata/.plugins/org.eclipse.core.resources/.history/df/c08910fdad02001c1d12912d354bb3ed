@@ -1,0 +1,52 @@
+package Nerubian.Exercise.service;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
+
+import Nerubian.Exercise.mapper.SocketMapper;
+import Nerubian.Exercise.model.CPU;
+import Nerubian.Exercise.model.Socket;
+import Nerubian.Exercise.repository.SocketRepository;
+
+public class SocketServiceImpl implements SocketService{
+
+private final SocketRepository socketRepository;
+private final SocketMapper socketMapper;
+	
+	public SocketServiceImpl(SocketRepository socketRepository, SocketMapper socketMapper) {
+		this.socketRepository = socketRepository;
+		this.socketMapper = socketMapper;
+	};
+	
+	
+	public List<Socket> listAll() {
+		// TODO Auto-generated method stub
+		return socketRepository.findAll();
+	}
+
+	public Socket getById(Long id) {
+		// TODO Auto-generated method stub
+		return socketRepository.findById(id).map(socketMapper::toSocket)
+                .orElseThrow(() -> new NoSuchElementException());
+	}
+
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		socketRepository.deleteById(id);
+	}
+
+	public Socket save(Socket socket) {
+		// TODO Auto-generated method stub
+		return socketRepository.save(socket);
+	}
+
+	public Socket update(Socket socket) {
+		// TODO Auto-generated method stub
+		if(socketRepository.findById(socket.getId())!=null){
+			return socketRepository.save(socket);
+		}
+		else return null;
+	}
+
+}

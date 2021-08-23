@@ -1,0 +1,153 @@
+package Nerubian.Exercise.model;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "cpus")
+public class CPU {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(nullable = false)
+	private String brand;
+
+	@Column(nullable = false)
+	private String model;
+
+	@Column(nullable = false)
+	private List<Socket> sockets;
+
+	@Column(nullable = false)
+	private double clockSpeed;
+
+	@Column(nullable = false)
+	private int numberOfCores;
+
+	@Column(nullable = false)
+	private int numberOfThreads;
+
+	@Column(nullable = false)
+	private double tdp;
+
+	@Column(nullable = false)
+	private double price;
+
+	//Constructors for CPU
+	public CPU() {
+		
+	}
+
+	public CPU(String brand, String model, List<Socket> sockets, double clockSpeed, int numberOfCores,
+			int numberOfThreads, double tdp, double price) {
+		super();
+		this.brand = brand;
+		this.model = model;
+		this.sockets = sockets;
+		this.clockSpeed = clockSpeed;
+		this.numberOfCores = numberOfCores;
+		this.numberOfThreads = numberOfThreads;
+		this.tdp = tdp;
+		this.price = price;
+	}
+
+	public CPU(Long id, String brand, String model, List<Socket> sockets, double clockSpeed, int numberOfCores,
+			int numberOfThreads, double tdp, double price) {
+		super();
+		this.id = id;
+		this.brand = brand;
+		this.model = model;
+		this.sockets = sockets;
+		this.clockSpeed = clockSpeed;
+		this.numberOfCores = numberOfCores;
+		this.numberOfThreads = numberOfThreads;
+		this.tdp = tdp;
+		this.price = price;
+	}
+
+	//generated getters and setters
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public List<Socket> getSockets() {
+		return sockets;
+	}
+
+	public void setSockets(List<Socket> sockets) {
+		this.sockets = sockets;
+	}
+
+	public double getClockSpeed() {
+		return clockSpeed;
+	}
+
+	public void setClockSpeed(double clockSpeed) {
+		this.clockSpeed = clockSpeed;
+	}
+
+	public int getNumberOfCores() {
+		return numberOfCores;
+	}
+
+	public void setNumberOfCores(int numberOfCores) {
+		this.numberOfCores = numberOfCores;
+	}
+
+	public int getNumberOfThreads() {
+		return numberOfThreads;
+	}
+
+	public void setNumberOfThreads(int numberOfThreads) {
+		this.numberOfThreads = numberOfThreads;
+	}
+
+	public double getTdp() {
+		return tdp;
+	}
+
+	public void setTdp(double tdp) {
+		this.tdp = tdp;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	//Object to String
+	
+	@Override
+	public String toString() {
+		return "CPU [id=" + id + ", brand=" + brand + ", model=" + model + ", sockets=" + sockets + ", clockSpeed="
+				+ clockSpeed + ", numberOfCores=" + numberOfCores + ", numberOfThreads=" + numberOfThreads + ", tdp="
+				+ tdp + ", price=" + price + "]";
+	}
+		
+}

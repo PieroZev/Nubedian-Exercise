@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.mapstruct.factory.Mappers"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.service.CPUService"/>
+<fullyQualifiedTypeName name="java.util.Optional"/>
+<fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.service.SocketServiceImpl"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.repository.CPURepository"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.model.Socket"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.mapper.SocketMapper"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.repository.SocketRepository"/>
+<fullyQualifiedTypeName name="org.mapstruct.Mapper"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.mapper.CPUMapper"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.model.CPU"/>
+<fullyQualifiedTypeName name="Nerubian.Exercise.service.CPUServiceImpl"/>
+</qualifiedTypeNameHistroy>

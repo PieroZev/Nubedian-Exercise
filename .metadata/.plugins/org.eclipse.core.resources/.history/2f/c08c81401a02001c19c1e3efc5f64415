@@ -1,0 +1,55 @@
+package Nerubian.Exercise.service;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import Nerubian.Exercise.mapper.CPUMapper;
+import Nerubian.Exercise.model.CPU;
+import Nerubian.Exercise.repository.CPURepository;
+
+@Service
+public class CPUServiceImpl implements CPUService {
+
+	
+	private final CPURepository cpurepository;
+	private final CPUMapper cpuMapper;
+	
+	public CPUServiceImpl(CPURepository cpurepository, CPUMapper cpuMapper) {
+		this.cpurepository = cpurepository;
+		this.cpuMapper = cpuMapper;
+	};
+	
+	public List<CPU> listAll() {
+		
+		return cpurepository.findAll();
+	}
+
+	public CPU getById(Long id) {
+		// TODO Auto-generated method stub
+		return cpurepository.findById(id).map(cpuMapper::toCPU)
+                .orElseThrow(() -> new NoSuchElementException());
+	}
+
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		cpurepository.deleteById(id);
+	}
+
+	public CPU save(CPU cpu) {
+		// TODO Auto-generated method stub
+		return cpurepository.save(cpu);
+	}
+
+	public CPU update(CPU cpu) {
+		if(cpurepository.findById(cpu.getId())!=null){
+			return cpurepository.save(cpu);
+		}
+		else return null;
+	}
+
+	
+	
+}

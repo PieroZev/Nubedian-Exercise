@@ -1,0 +1,37 @@
+package Nerubian.Exercise.mapper;
+
+import javax.annotation.Generated;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import Nerubian.Exercise.model.CPU;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2021-08-21T21:21:15-0500",
+    comments = "version: 1.3.1.Final, compiler: Eclipse JDT (IDE) 3.19.0.v20190903-0936, environment: Java 1.8.0_291 (Oracle Corporation)"
+)
+@Component
+public class CPUMapperImpl implements CPUMapper {
+
+	@Override
+	public CPU toCPU(CPU entity) {
+		if ( entity == null ) {
+            return null;
+        }
+
+        CPU cpu = new CPU();
+
+        cpu.setId( entity.getId() );
+        cpu.setBrand( entity.getBrand() );
+        cpu.setModel( entity.getModel() );
+        cpu.setSockets( entity.getSockets() );
+        cpu.setClockSpeed( entity.getClockSpeed() );
+        cpu.setNumberOfCores( entity.getNumberOfCores() );
+        cpu.setNumberOfThreads( entity.getNumberOfThreads());
+        cpu.setTdp(entity.getTdp());
+        cpu.setPrice( entity.getPrice() );
+
+        return cpu;
+	}
+}

@@ -1,0 +1,22 @@
+package Nerubian.Exercise;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import Nerubian.Exercise.model.CPU;
+
+
+@SpringBootApplication
+public class App {
+	
+	CPU cpu1 = new CPU("Ideapad", "Lenovo", 3.5, 8, 10, 6.3, 1000.00);
+	
+	public static void main(String[] args) {
+		SpringApplication.run(App.class, args);
+	}
+}
+
+/*(scanBasePackages={
+"Nerubian.Exercise.controller", "Nerubian.Exercise.mapper",
+"Nerubian.Exercise.model", "Nerubian.Exercise.repository",
+"Nerubian.Exercise.service"})*/

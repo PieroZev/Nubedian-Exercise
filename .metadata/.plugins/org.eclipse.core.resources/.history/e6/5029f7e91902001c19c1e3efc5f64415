@@ -1,0 +1,17 @@
+package Nerubian.Exercise.mapper;
+
+import java.util.Optional;
+
+import org.mapstruct.InjectionStrategy;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
+
+import Nerubian.Exercise.model.CPU;
+
+@Mapper(uses = {SocketMapper.class},componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
+public interface CPUMapper {
+
+	CPUMapper INSTANCE = Mappers.getMapper(CPUMapper.class);
+	
+	CPU toCPU(Optional<CPU> cpu);
+}

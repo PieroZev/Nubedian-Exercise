@@ -1,0 +1,54 @@
+package Nerubian.Exercise.model;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Socket {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(nullable = false)
+	private String description;
+
+	
+	//Generated Constructors
+	public Socket(Long id, String description) {
+		super();
+		this.id = id;
+		this.description = description;
+	}
+
+	public Socket() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	//Generated getters and setters
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	// generates Object to String
+	@Override
+	public String toString() {
+		return "Socket [id=" + id + ", description=" + description + "]";
+	}
+	
+}

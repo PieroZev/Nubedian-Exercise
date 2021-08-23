@@ -1,0 +1,24 @@
+package Nerubian.Exercise;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import Nerubian.Exercise.mapper.CPUMapper;
+
+
+@SpringBootApplication(scanBasePackages={
+		"Nerubian.Exercise.controller", "Nerubian.Exercise.mapper",
+		"Nerubian.Exercise.model", "Nerubian.Exercise.repository",
+		"Nerubian.Exercise.service"})
+public class App {
+
+	public CPUMapper cpuMapper;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(App.class, args);
+	}
+
+	
+}
+

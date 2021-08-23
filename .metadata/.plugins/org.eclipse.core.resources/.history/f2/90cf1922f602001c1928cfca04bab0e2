@@ -1,0 +1,11 @@
+package Nerubian.Exercise.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import Nerubian.Exercise.model.CPU;
+
+@Repository
+public interface CPURepository extends JpaRepository<CPU, Long>{
+
+}

@@ -1,0 +1,34 @@
+package Nerubian.Exercise.repository;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.baufest.tennis.springtennis.model.Entrenador;
+import com.baufest.tennis.springtennis.model.Jugador;
+
+public class CPURepositoryTest {
+
+	private static final Entrenador entrenador1 = new Entrenador("Jorge");
+	
+	@Autowired
+    private EntrenadorRepository repository;
+
+    @Test
+    public void findAll() {
+        List<Entrenador> entrenadoresExpected = new ArrayList<>();
+        entrenadoresExpected.add(entrenador1);
+        
+
+        repository.save(entrenador1);
+
+        List<Entrenador> entrenadores = repository.findAll();
+        assertNotNull(entrenadores);
+        assertEquals(entrenadoresExpected,entrenadores);
+    }
+}
