@@ -5,5 +5,5 @@ COPY . /Exercise-web
 RUN make /Exercise-web/nubedian-app
 CMD npm start
 COPY . /Exercise
-RUN make /Exercise/src/main/java/Nerubian/Exercise/App
-CMD mvn start
+RUN make /Exercise
+CMD mvn clean compile exec:java
